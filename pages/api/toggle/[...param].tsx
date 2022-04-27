@@ -10,7 +10,7 @@ async function handler(req: any, resp: any){
          $set: { done: req.query.param[1] } 
       };
 
-    const client = await MongoClient.connect("mongodb+srv://arun:lTJ4BHfOAcFfY9gP@cluster0.r5cf6.mongodb.net/todo?retryWrites=true&w=majority")
+    const client = await MongoClient.connect("mongo db connection string")
     const db = client.db()
     const collection = db.collection("todos")
     const result = await collection.updateOne(query, updateTodo, options);
