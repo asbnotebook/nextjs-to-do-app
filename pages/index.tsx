@@ -60,7 +60,7 @@ export async function getStaticProps(context: any){
         id: todo._id.toString()
       }))
     },
-    revalidate: 3600
+    revalidate: 60
   }
 }
 
